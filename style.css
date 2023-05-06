@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    border: solid gray 2px;
+    width: 500px;
+    height: 500px;
+}
+
+/* Created */
+
+.cell {
+    border: solid gray 0.5px;
+    border-collapse: collapse;
+}
