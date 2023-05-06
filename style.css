@@ -25,3 +25,7 @@ body {
     border: solid gray 0.5px;
     border-collapse: collapse;
 }
+
+.colored {
+    background-color: black;
+}
