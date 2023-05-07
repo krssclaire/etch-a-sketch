@@ -1,8 +1,6 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('button');
 
-btn.addEventListener('click', changeGrid);
-
 
 function createGrid(num) {
     container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
@@ -15,39 +13,31 @@ function createGrid(num) {
         div.setAttribute('id', `cell-${i + 1}`)
     }
 }
-
 createGrid(16);
 
-
-const cell = document.querySelectorAll('.cell');
-
-const cellHovered = e => {
-    cellId = e.target.id;
-    changeCellColor();
-}
-
-for (let gridItem of cell) {
-    gridItem.addEventListener('mouseover', cellHovered);
-}
-
-function changeCellColor() {
-    document.getElementById(`${cellId}`).style.backgroundColor = 'black';   
-}
-
-function resetGrid() {
-    while (container.firstChild) {
-        container.removeChild(container.lastChild);
-      }
-}
+// Change grid size
+btn.addEventListener('click', changeGrid);
 
 function changeGrid() {
     let size = parseInt(prompt('Insert the size of the grid', ''));
 
     if (size > 0 && size <= 100) {
-        resetGrid();
+        container.innerHTML = '';
         createGrid(size);
     } else {
-        alert('Not valid. Retry!')
-    }
-        
+        alert('Not valid. Retry!');
+    } 
 }
+
+// Hover effect for coloring each cell hovered
+let cells = document.querySelectorAll('div');
+
+cells.forEach(cell => {
+    cell.addEventListener("mouseover", (event) => {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+        //document.getElementById(`${cellId}`).style.backgroundColor = 'black';   
+    event.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;   
+    })
+});

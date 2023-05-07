@@ -13,6 +13,27 @@ body {
     gap: 3vw;
 }
 
+#commands {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+button {
+    background-color: rgb(72, 22, 22);
+    color: white;
+    border: solid rgb(72, 22, 22) 2px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: transparent;
+    color: rgb(72, 22, 22);
+    border-color: rgb(72, 22, 22);
+}
+
 .container {
     display: grid;
     border: solid gray 2px;
