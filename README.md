@@ -2,5 +2,4 @@
 
 This project, being part of The Odin Project Foundation Curriculum, is meant to shape better DOM manipulation skills.
 
-
-Note: The Instructions.md file must be ignored since it contains the instructions of the project. Its existence is meant for working on the project offline.
+This simple game is a very basic version of Etch a Sketch in which the user can color the cells of the grid while hovering on them at random colors.
