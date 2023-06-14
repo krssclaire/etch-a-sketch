@@ -7,10 +7,25 @@
     <title>Etch a Sketch</title>
     <link rel="icon" href="assets/etch-a-sketch.png">
     <link type="text/css" rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js" defer></script>
+    <!--<script type="text/javascript" src="script.js" defer></script>-->
 </head>
 <body>
-    <button>Resize grid</button>
-    <div class="container"></div>
+    <h1>Etch a Sketch</h1>
+    <div class="sketchpad">
+        <div class="commands">
+            <div class="color">
+                <input type="color" name="color" id="color-picker">
+                <button id="color-mode">Color</button>
+            </div>
+            <button id="rainbow-mode">Rainbow</button>
+            <button id="eraser">Eraser</button>
+            <button id="clear">Clear</button>
+            <div class="sizing">
+                <p id="size">16 x 16</p>
+                <input type="range" name="range" id="range" min="2" max="100">
+            </div>
+        </div>
+        <div class="grid"></div>
+    </div>
 </body>
 </html>
