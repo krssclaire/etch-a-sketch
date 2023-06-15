@@ -105,8 +105,8 @@ input[type="range"] {
 }
 
 
-/* Tablet & Mobile */
-@media screen and (max-width: 680px) {
+/* Mobile */
+@media screen and (max-width: 670px) {
     body {
         height: 100vh;
     }
@@ -116,7 +116,7 @@ input[type="range"] {
         align-items: center;
     }
     .commands {
-        width: 90vw;
+        width: 80vw;
         padding: 20px;
         gap: 10px;
     }
@@ -126,7 +126,7 @@ input[type="range"] {
         width: 200px;
     }
     .grid {
-        height: 90vw;
-        width: 90vw;
+        height: 80vw;
+        width: 80vw;
     }
 }

@@ -32,4 +32,4 @@ Live demo: [Home Page](https://krssclaire.github.io/etch-a-sketch)
 ## Acknowledgments
 
 * Inspired by [The Odin Project](https://www.theodinproject.com) fourth project of the Foundations Course
-* Etch-a-Sketch favicon by (Creaticca Creative Agency)[https://www.flaticon.com/free-icons/etch-a-sketch] - Flaticong
+* Etch-a-Sketch favicon by (Creaticca Creative Agency)[https://www.flaticon.com/free-icons/etch-a-sketch] - Flaticon
