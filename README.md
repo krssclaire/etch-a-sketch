@@ -21,7 +21,14 @@ Live demo: [Home Page](https://krssclaire.github.io/etch-a-sketch)
 
 ## Features
 
-* The user can color in the sketchpad while hovering on cells at random colors
+* About the sketchpad
+    * The user can color in the sketchpad while hovering on cells
+    * The user can select colors or rainbow mode
+    * Eraser is available
+    * The user can reset the grid to its default dimensions 
+    * The user can select the size of the grid through range input
+* About the design
+    * It is responsive on all device
 
 
 ## What I learned
