@@ -1,5 +1,6 @@
 const DEFAULT_SIZE = 16;
 const DEFAULT_COLOR = '#000';
+const DEFAULT_BTN = 'color';
 const container = document.querySelector('.grid');
 const colorPicker = document.querySelector('#color-picker');
 const colorBtn = document.querySelector('#color-choice');
@@ -29,7 +30,10 @@ eraserBtn.addEventListener('click', () => {
     currentColor = 'white'
 });
 
-
+function selectButton(button) {
+    btnSelected = button;
+    btnSelected.classList.add('btn-active');
+}
 
 function createSketchPad(size) {
     container.innerHTML = '';

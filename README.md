@@ -28,7 +28,7 @@ Live demo: [Home Page](https://krssclaire.github.io/etch-a-sketch)
     * The user can reset the grid to its default dimensions 
     * The user can select the size of the grid through range input
 * About the design
-    * It is responsive on all device
+    * It is responsive on all devices
 
 
 ## What I learned
@@ -39,4 +39,4 @@ Live demo: [Home Page](https://krssclaire.github.io/etch-a-sketch)
 ## Acknowledgments
 
 * Inspired by [The Odin Project](https://www.theodinproject.com) fourth project of the Foundations Course
-* Etch-a-Sketch favicon by (Creaticca Creative Agency)[https://www.flaticon.com/free-icons/etch-a-sketch] - Flaticon
+* Etch-a-Sketch favicon by [Creaticca Creative Agency](https://www.flaticon.com/free-icons/etch-a-sketch) - Flaticon

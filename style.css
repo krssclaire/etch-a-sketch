@@ -4,13 +4,6 @@
     --commands-color: rgb(0, 103, 138);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: rgb(32, 31, 31);
-        --commands-color: rgb(5, 65, 97);
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +43,7 @@ body {
     gap: 5px;
 }
 
-button, .btn-inactive {
+button {
     background-color: transparent;
     color: var(--commands-color);
     border: solid var(--commands-color) 2px;
@@ -60,7 +53,7 @@ button, .btn-inactive {
     width: 120px;
 }
 
-button:active {
+button:focus {
     background-color: var(--commands-color);
     color: var(--bg-color);
 }
@@ -100,11 +93,6 @@ input[type="range"] {
     border-collapse: collapse;
 }
 
-.btn-active {
-    background-color: var(--commands-color);
-    color: var(--bg-color);
-}
-
 .reset {
     background-color: var(--bg-color);
 }
@@ -114,6 +102,7 @@ input[type="range"] {
 @media screen and (max-width: 670px) {
     body {
         height: 100vh;
+        overflow-y: auto;
     }
     .sketchpad {
         flex-direction: column-reverse;
