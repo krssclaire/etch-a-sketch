@@ -12,28 +12,26 @@ const sizingRange = document.querySelector('input[type="range"]');
 let currentColor = DEFAULT_COLOR; 
 let rainbow = false;
 
-resetBtn.addEventListener('click', clearGrid);
-sizingRange.addEventListener('input', changeGrid);
 colorPicker.addEventListener('input', () => {
     rainbow = false;
-    currentColor = colorPicker.value
+    currentColor = colorPicker.value;
 });
 colorBtn.addEventListener('click', () => {
     rainbow = false;
-    currentColor = colorPicker.value
+    currentColor = colorPicker.value;
 });
 rainbowBtn.addEventListener('click', () => {
     rainbow = true;
 });
 eraserBtn.addEventListener('click', () => {
     rainbow = false;
-    currentColor = 'white'
+    currentColor = 'white';
 });
+resetBtn.addEventListener('click', () => {
+    clearGrid();
+});
+sizingRange.addEventListener('input', changeGrid);
 
-function selectButton(button) {
-    btnSelected = button;
-    btnSelected.classList.add('btn-active');
-}
 
 function createSketchPad(size) {
     container.innerHTML = '';

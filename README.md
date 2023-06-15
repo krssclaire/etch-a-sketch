@@ -1,7 +1,7 @@
 # Etch-a-Skecth
 
 Online pixelated sketchpad. <br>
-Live demo: [Home Page](https://krssclaire.github.io/etch-a-sketch)
+Live demo: [Etch-a-Sketch](https://krssclaire.github.io/etch-a-sketch)
 
 
 ## Technologies used

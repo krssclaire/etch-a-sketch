@@ -53,7 +53,7 @@ button {
     width: 120px;
 }
 
-button:focus {
+button:hover, button:focus {
     background-color: var(--commands-color);
     color: var(--bg-color);
 }
@@ -83,7 +83,6 @@ input[type="range"] {
     width: 500px;
     height: 500px;
 }
-
 
 
 /* Created */
