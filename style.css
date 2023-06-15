@@ -50,7 +50,7 @@ body {
     gap: 5px;
 }
 
-button {
+button, .btn-inactive {
     background-color: transparent;
     color: var(--commands-color);
     border: solid var(--commands-color) 2px;
@@ -98,6 +98,11 @@ input[type="range"] {
 .cell {
     border: solid var(--grid-color) 0.5px;
     border-collapse: collapse;
+}
+
+.btn-active {
+    background-color: var(--commands-color);
+    color: var(--bg-color);
 }
 
 .reset {

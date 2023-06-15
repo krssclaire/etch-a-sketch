@@ -8,11 +8,28 @@ const eraserBtn = document.querySelector('#eraser');
 const resetBtn = document.querySelector('#reset');
 const gridSizing = document.querySelector('.sizing p');
 const sizingRange = document.querySelector('input[type="range"]');
-const btn = document.querySelector('button');
 let currentColor = DEFAULT_COLOR; 
+let rainbow = false;
 
 resetBtn.addEventListener('click', clearGrid);
 sizingRange.addEventListener('input', changeGrid);
+colorPicker.addEventListener('input', () => {
+    rainbow = false;
+    currentColor = colorPicker.value
+});
+colorBtn.addEventListener('click', () => {
+    rainbow = false;
+    currentColor = colorPicker.value
+});
+rainbowBtn.addEventListener('click', () => {
+    rainbow = true;
+});
+eraserBtn.addEventListener('click', () => {
+    rainbow = false;
+    currentColor = 'white'
+});
+
+
 
 function createSketchPad(size) {
     container.innerHTML = '';
@@ -23,35 +40,38 @@ function createSketchPad(size) {
         let div = document.createElement('div');
         div.classList.add('cell');
         container.appendChild(div);
-        div.setAttribute('id', `cell-${i + 1}`);
     }
     
+    // Color cells while hovering
     let cells = document.querySelectorAll('.grid div');
-    
     cells.forEach(cell => {
-        cell.addEventListener("mouseover", (event) => {
-        //document.getElementById(`${cellId}`).style.backgroundColor = 'black';   
-        event.target.style.backgroundColor = currentColor;   
+        cell.addEventListener('mouseover', (e) => {
+            if (rainbow) {
+                let red = Math.floor(Math.random() * 255);
+                let green = Math.floor(Math.random() * 255);
+                let blue = Math.floor(Math.random() * 255);
+                currentColor = `rgb(${red}, ${green}, ${blue})`;   
+            }
+            e.target.style.backgroundColor = currentColor;   
         })
     });
 }
-
 
 function updateGridSizing(size) {
     gridSizing.textContent = `${size} x ${size}`;
 }
 
 function clearGrid() {
+    updateGridSizing(DEFAULT_SIZE)
     createSketchPad(DEFAULT_SIZE);
 }
 
 function changeGrid() {
     let size = sizingRange.value;
     container.innerHTML = '';
-    createSketchPad(size);
     updateGridSizing(size);
+    createSketchPad(size);
 }
-
 
 window.onload = () => {
     container.innerHTML = '';
